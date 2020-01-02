@@ -9,17 +9,22 @@ class Hello2 extends Component{
     }
 
     handleClick = () => {
-        console.log("CLICK")
+        console.log("CLICK ++")
         this.setState({count: ++ this.state.count})
+    }
+
+    handleClick2 = () => {
+        console.log("CLICK --")
+        this.setState({count: -- this.state.count})
     }
 
     render() {
         return (
-            <>
+            <div>
             <h2>{this.state.count}</h2>
             <button onClick= {this.handleClick}> + </button>
-            <button> - </button>
-            </>
+            <button onClick= {this.handleClick2}> - </button>
+            </div>
         )
     }
 }
